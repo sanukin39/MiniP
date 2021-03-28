@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MiniP</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <style>
+        .receiving-box-outer {
+            display: table;
+            width: 100%;
+            padding: 15px 0;
+        }
+        .receiving-box-inner {
+            height: 230px;
+            color: #777;
+            border: 10px dashed #aaa;
+            border-radius: 10px;
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div id="app" class="container">
+    <div class="receiving-box-outer">
+        <div class="receiving-box-inner" id="drop-area">
+            <h2 id="status-text">Drop png</h2>
+            <h4 id="compression-result"></h4>
+        </div>
+    </div>
+</div>
+<script>
+window.onload = () => {
+    var area = document.getElementById('drop-area');
+    area.ondragover = function ()
+    {
+      return false;
+    };
+
+    area.ondrop = function (arg)
+    {
+        var filePath = arg.dataTransfer.files[0].path;
+        window.api.Compress(filePath);
+        var text = document.getElementById('status-text');
+        text.textContent="Compressing...";
+        var resultText = document.getElementById('compression-result');
+        resultText.textContent = "";
+    };
+
+    window.api.CompressCompleted((event, args) =>
+    {
+        var text = document.getElementById('status-text');
+        text.textContent = "Complete!!";
+        var resultText = document.getElementById('compression-result');
+        resultText.innerText = "file count: " + args.targetCount + " saved: " + args.compressionLevel + "%";
+    });
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "minip",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "app-root-dir": "^1.0.2",
+    "async": "^3.2.0",
+    "bootstrap": "^4.6.0"
+  }
+}
