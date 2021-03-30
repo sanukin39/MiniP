@@ -48,16 +48,22 @@ class CompressionResult
         this.compressionLevel = compressionLevel
     }
 }
-ipcMain.handle('compress', async (arg, filepath) => {
-    var stats = fs.statSync(filepath);
+ipcMain.handle('compress', async (arg, filepaths) => {
 
-    if(stats.isDirectory())
-    {
-        await showFiles(filepath, AppendPath);
-    }
-    else
-    {
-        AppendPath(filepath);
+    var paths = filepaths.split(':');
+
+    for(var i = 0; i < paths.length; i++){
+        var filepath = paths[i];
+        var stats = fs.statSync(filepath);
+
+        if(stats.isDirectory())
+        {
+            await showFiles(filepath, AppendPath);
+        }
+        else
+        {
+            AppendPath(filepath);
+        }
     }
 
     var targetCount = targetFiles.length;

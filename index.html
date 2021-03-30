@@ -41,7 +41,12 @@ window.onload = () => {
     area.ondrop = function (arg)
     {
         var filePath = arg.dataTransfer.files[0].path;
-        window.api.Compress(filePath);
+        var files = arg.dataTransfer.files;
+        var paths = [];
+        for(var i = 0; i < files.length; i++){
+            paths.push(files[i].path);
+        }
+        window.api.Compress(paths.join(':'));
         var text = document.getElementById('status-text');
         text.textContent="Compressing...";
         var resultText = document.getElementById('compression-result');
