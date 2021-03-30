@@ -11,7 +11,7 @@ Simplest png compression tool for MacOS
 ![converted](https://github.com/sanukin39/MiniP/blob/main/images/converted.png)
 
 ## Download
-Get app zip at [release](https://github.com/sanukin39/MiniP/releases/new) page
+Download MiniP.zip at [release](https://github.com/sanukin39/MiniP/releases) page
 
 ## Usage
 Laungh app and drop png image you want to compress
