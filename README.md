@@ -25,7 +25,7 @@ Multiple files
 
 ![file](https://github.com/sanukin39/MiniP/blob/main/images/files.png)
 
-Filder contains png images
+Folder contains png images
 
 ![file](https://github.com/sanukin39/MiniP/blob/main/images/folder.png)
 
