@@ -29,6 +29,9 @@ Filder contains png images
 
 ![file](https://github.com/sanukin39/MiniP/blob/main/images/folder.png)
 
+## Notice
+This tool Force overwrite original png file. Backup important files in advance.
+
 ## License
 [GNU](https://github.com/sanukin39/MiniP/blob/main/LICENSE)
 
