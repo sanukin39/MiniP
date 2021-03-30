@@ -14,7 +14,7 @@ Simplest png compression tool for MacOS
 Download MiniP.zip at [release](https://github.com/sanukin39/MiniP/releases) page
 
 ## Usage
-Laungh app and drop png image you want to compress
+Launch app and drop png image you want to compress
 
 ## Supported drop format
 Single file
