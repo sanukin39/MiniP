@@ -4,6 +4,12 @@ Simplest png compression tool for MacOS
 ## DEMO
 ![demo](https://github.com/sanukin39/MiniP/blob/main/images/demo.gif)
 
+#### Original 1076KB
+![original](https://github.com/sanukin39/MiniP/blob/main/images/original.png)
+
+#### Compressed 388KB
+![converted](https://github.com/sanukin39/MiniP/blob/main/images/converted.png)
+
 ## Download
 Get app zip at [release](https://github.com/sanukin39/MiniP/releases/new) page
 
